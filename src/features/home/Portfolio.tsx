@@ -10,6 +10,7 @@ import {
   Calendar,
   Building,
   ExternalLink,
+  Globe,
 } from "lucide-react";
 
 import { IconThemeToggle } from "@/components/mode-toggle";
@@ -18,7 +19,7 @@ import { AnimatedBackground } from "@/components/AnimatedBackground";
 type SectionId = "hero" | "about" | "experience" | "skills" | "projects" | "contact";
 
 const Portfolio = () => {
-  
+
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState<Record<SectionId, boolean>>({
     hero: true,
@@ -129,9 +130,9 @@ const Portfolio = () => {
     <div className="min-h-screen w-full transition-all duration-700 bg-background text-foreground relative">
       <AnimatedBackground />
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-xl font-bold tracking-wider text-foreground">
-            SN
+            SB
           </div>
           <IconThemeToggle />
         </div>
@@ -155,24 +156,42 @@ const Portfolio = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm tracking-widest text-muted-foreground animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <span className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              +91-899898887
+              +91-9481006002
             </span>
             <span className="w-px h-4 bg-border"></span>
-            <span className="flex items-center gap-2">
+            <span
+              className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
+              onClick={() => window.location.href = 'mailto:shivabadiger2@gmail.com'}
+            >
               <Mail className="h-4 w-4" />
-              temp@gmail.com
+              shivabadiger2@gmail.com
             </span>
             <span className="w-px h-4 bg-border"></span>
-            <span className="flex items-center gap-2">
+            <span
+              className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
+              onClick={() => window.open('https://www.linkedin.com/in/shivaprasad-badiger/', '_blank')}
+            >
               <Linkedin className="h-4 w-4" />
-              linkedin.com/in/shiva
+              LinkedIn
             </span>
             <span className="w-px h-4 bg-border"></span>
-            <span className="flex items-center gap-2">
+            <span
+              className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
+              onClick={() => window.open('https://github.com/Shivaprasad-Badiger', '_blank')}
+            >
               <Github className="h-4 w-4" />
-              github.com/Shiva
+              GitHub
+            </span>
+            <span className="w-px h-4 bg-border"></span>
+            <span
+              className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
+              onClick={() => window.open('https://portfolio-omega-khaki-56.vercel.app/', '_blank')}
+            >
+              <Globe className="h-4 w-4" />
+              Portfolio
             </span>
           </div>
+
         </div>
 
         {/* Animated background elements */}
@@ -180,17 +199,15 @@ const Portfolio = () => {
           <div
             className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full border border-muted-foreground/10 animate-pulse"
             style={{
-              transform: `translateY(${scrollY * 0.1}px) rotate(${
-                scrollY * 0.1
-              }deg)`,
+              transform: `translateY(${scrollY * 0.1}px) rotate(${scrollY * 0.1
+                }deg)`,
             }}
           ></div>
           <div
             className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full border border-muted-foreground/10 animate-pulse"
             style={{
-              transform: `translateY(${scrollY * -0.1}px) rotate(${
-                scrollY * -0.1
-              }deg)`,
+              transform: `translateY(${scrollY * -0.1}px) rotate(${scrollY * -0.1
+                }deg)`,
             }}
           ></div>
         </div>
@@ -199,11 +216,10 @@ const Portfolio = () => {
       {/* About Section */}
       <section
         id="about"
-        className={`py-24 px-6 transition-all duration-1000 ${
-          isVisible.about
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-12"
-        }`}
+        className={`py-24 px-6 transition-all duration-1000 ${isVisible.about
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
+          }`}
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-thin mb-16 text-center tracking-wider text-foreground">
@@ -222,13 +238,12 @@ const Portfolio = () => {
       {/* Skills Section */}
       <section
         id="skills"
-        className={`py-24 px-6 transition-all duration-1000 ${
-          isVisible.skills
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-12"
-        }`}
+        className={`py-24 px-6 transition-all duration-1000 ${isVisible.skills
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
+          }`}
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-thin mb-16 text-center tracking-wider text-foreground">
             SKILLS
           </h2>
@@ -266,13 +281,12 @@ const Portfolio = () => {
       {/* Experience Section */}
       <section
         id="experience"
-        className={`py-24 px-6 transition-all duration-1000 ${
-          isVisible.experience
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-12"
-        }`}
+        className={`py-24 px-6 transition-all duration-1000 ${isVisible.experience
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
+          }`}
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-thin mb-16 text-center tracking-wider text-foreground">
             EXPERIENCE
           </h2>
@@ -336,13 +350,12 @@ const Portfolio = () => {
       {/* Projects Section */}
       <section
         id="projects"
-        className={`py-24 px-6 transition-all duration-1000 ${
-          isVisible.projects
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-12"
-        }`}
+        className={`py-24 px-6 transition-all duration-1000 ${isVisible.projects
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
+          }`}
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-thin mb-16 text-center tracking-wider text-foreground">
             PROJECTS
           </h2>
@@ -350,21 +363,21 @@ const Portfolio = () => {
             <Card className="bg-card/80 border-border backdrop-blur-md hover:scale-[1.02] hover:shadow-xl transition-all duration-700">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-medium mb-4 text-card-foreground">
-                  Custom Form Builder
+                  Custom Form Builder & Interactive Preview
                 </h3>
                 <div className="flex gap-4 mb-6">
-                  <a 
-                    href="https://github.com/shivaprasad-badiger/form-builder" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/Shivaprasad-Badiger/Custom-Form"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
                   >
                     <Github className="w-4 h-4" />
                     GitHub
                   </a>
-                  <a 
-                    href="https://form-builder-demo.netlify.app" 
-                    target="_blank" 
+                  <a
+                    href="https://custom-form-jade.vercel.app/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
                   >
@@ -374,7 +387,7 @@ const Portfolio = () => {
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   Developed a dynamic form creation tool supporting 15+ configurable field types, including
-                  custom validation using regex patterns. Utilized Formik and Yup for form handling and validation, 
+                  custom validation using regex patterns. Utilized Formik and Yup for form handling and validation,
                   Ant Design for UI components, and Tailwind CSS for responsive layouts.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -393,18 +406,18 @@ const Portfolio = () => {
                   Personal Portfolio
                 </h3>
                 <div className="flex gap-4 mb-6">
-                  <a 
-                    href="https://github.com/shivaprasad-badiger/portfolio" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/Shivaprasad-Badiger/Portfolio"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
                   >
                     <Github className="w-4 h-4" />
                     GitHub
                   </a>
-                  <a 
-                    href="https://shivaprasad-portfolio.netlify.app" 
-                    target="_blank" 
+                  <a
+                    href="https://portfolio-omega-khaki-56.vercel.app/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
                   >
@@ -459,11 +472,10 @@ const Portfolio = () => {
       {/* Contact Section */}
       <section
         id="contact"
-        className={`py-24 px-6 transition-all duration-1000 ${
-          isVisible.contact
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-12"
-        }`}
+        className={`py-24 px-6 transition-all duration-1000 ${isVisible.contact
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-12"
+          }`}
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-thin mb-16 tracking-wider text-foreground">
@@ -471,36 +483,45 @@ const Portfolio = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             <a
-              href="tel:+91899898887"
+              href="tel:+919481006002"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
             >
               <Phone className="h-5 w-5" />
-              <span>+91-899898887</span>
+              <span>+91-9481006002</span>
             </a>
             <a
-              href="mailto:temp@gmail.com"
+              href="mailto:shivabadiger2@gmail.com"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
             >
               <Mail className="h-5 w-5" />
-              <span>temp@gmail.com</span>
+              <span>shivabadiger2@gmail.com</span>
             </a>
             <a
-              href="https://linkedin.com/in/shiva"
+              href="https://www.linkedin.com/in/shivaprasad-badiger/"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Linkedin className="h-5 w-5" />
-              <span>linkedin.com/in/shiva</span>
+              <span>LinkedIn</span>
             </a>
             <a
-              href="https://github.com/Shiva"
+              href="https://github.com/Shivaprasad-Badiger"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Github className="h-5 w-5" />
-              <span>github.com/Shiva</span>
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://portfolio-omega-khaki-56.vercel.app/"
+              className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Globe className="h-5 w-5" />
+              <span>Portfolio</span>
             </a>
           </div>
 
@@ -509,6 +530,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="py-12 text-center text-muted-foreground border-t border-border">

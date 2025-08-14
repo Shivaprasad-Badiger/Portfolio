@@ -13,21 +13,37 @@ export function IconThemeToggle() {
     }
   };
 
-  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const isDark =
+    theme === "dark" ||
+    (theme === "system" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
     <Button
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="relative bg-background/80 backdrop-blur-sm border border-border/50 hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+      className="
+        relative
+        bg-white text-black border border-black
+        dark:bg-gray-900 dark:text-white dark:border-white
+        backdrop-blur-sm
+        hover:bg-accent hover:text-accent-foreground
+        transition-all duration-300
+      "
     >
-      <Sun className={`h-[1.2rem] w-[1.2rem] text-black transition-all duration-300 ${
-        isDark ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'
-      }`} />
-      <Moon className={`absolute h-[1.2rem] w-[1.2rem] text-black transition-all duration-300 ${
-        isDark ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
-      }`} />
+      <Sun
+        className={`h-[1.2rem] w-[1.2rem] transition-all duration-300 ${isDark
+            ? "rotate-90 scale-0 opacity-0"
+            : "rotate-0 scale-100 opacity-100"
+          }`}
+      />
+      <Moon
+        className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-300 ${isDark
+            ? "rotate-0 scale-100 opacity-100"
+            : "-rotate-90 scale-0 opacity-0"
+          }`}
+      />
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
