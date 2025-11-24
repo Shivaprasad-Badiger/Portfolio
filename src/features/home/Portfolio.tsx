@@ -182,7 +182,7 @@ const Portfolio = () => {
               <Github className="h-4 w-4" />
               GitHub
             </span>
-            <span className="w-px h-4 bg-border"></span>
+            {/* <span className="w-px h-4 bg-border"></span> */}
             {/* <span
               className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
               onClick={() => window.open('https://portfolio-omega-khaki-56.vercel.app/', '_blank')}
