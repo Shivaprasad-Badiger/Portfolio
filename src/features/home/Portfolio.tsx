@@ -183,13 +183,13 @@ const Portfolio = () => {
               GitHub
             </span>
             <span className="w-px h-4 bg-border"></span>
-            <span
+            {/* <span
               className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
               onClick={() => window.open('https://portfolio-omega-khaki-56.vercel.app/', '_blank')}
             >
               <Globe className="h-4 w-4" />
               Portfolio
-            </span>
+            </span> */}
           </div>
 
         </div>
@@ -514,7 +514,7 @@ const Portfolio = () => {
               <Github className="h-5 w-5" />
               <span>GitHub</span>
             </a>
-            <a
+            {/* <a
               href="https://portfolio-omega-khaki-56.vercel.app/"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
               target="_blank"
@@ -522,7 +522,7 @@ const Portfolio = () => {
             >
               <Globe className="h-5 w-5" />
               <span>Portfolio</span>
-            </a>
+            </a> */}
           </div>
 
           <div className="text-4xl font-thin tracking-widest text-muted-foreground">
