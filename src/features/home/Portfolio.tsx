@@ -658,17 +658,37 @@ const Portfolio = () => {
     },
   ];
 
-  const projects = [
-    {
-      name: "Custom Form Builder & Interactive Preview",
-      github: "https://github.com/Shivaprasad-Badiger/Custom-Form",
-      live: "https://custom-form-jade.vercel.app/",
-      techStack:
-        ["React", "JavaScript", "Formik", "Yup", "Ant Design", "Tailwind CSS"],
-      description:
-        "Created a dynamic form builder supporting 15+ configurable fields with regex-based validation. Implemented robust form handling using Formik and Yup. Used Ant Design and Tailwind CSS for responsive UI.",
-    },
-  ];
+const projects = [
+  {
+    name: "Custom Form Builder & Interactive Preview",
+    github: "https://github.com/Shivaprasad-Badiger/Custom-Form",
+    live: "https://custom-form-jade.vercel.app/",
+    techStack: [
+      "React",
+      "JavaScript",
+      "Formik",
+      "Yup",
+      "Ant Design",
+      "Tailwind CSS"
+    ],
+    description:
+      "Created a dynamic form builder supporting 15+ configurable fields with regex-based validation. Implemented robust form handling using Formik and Yup. Used Ant Design and Tailwind CSS for responsive UI.",
+  },
+  {
+    name: "Personal Portfolio",
+    github: "https://github.com/Shivaprasad-Badiger/Portfolio",
+    live: "https://portfolio-omega-khaki-56.vercel.app/",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    description:
+      "Built a minimalist black-and-white themed portfolio using React, TypeScript, Vite, and Tailwind CSS. Features smooth animations, responsive UI, and clean project showcase.",
+  },
+];
+
 
   return (
     <div className="min-h-screen w-full transition-all duration-700 bg-background text-foreground relative">
@@ -738,7 +758,7 @@ const Portfolio = () => {
               <Github className="h-4 w-4" />
               GitHub
             </span>
-            <span className="w-px h-4 bg-border"></span>
+            {/* <span className="w-px h-4 bg-border"></span>
             <span
               className="flex items-center gap-2 cursor-pointer hover:text-foreground transition-colors"
               onClick={() =>
@@ -747,7 +767,7 @@ const Portfolio = () => {
             >
               <Globe className="h-4 w-4" />
               Portfolio
-            </span>
+            </span> */}
           </div>
         </div>
 
@@ -1093,7 +1113,7 @@ const Portfolio = () => {
               <Github className="h-5 w-5" />
               <span>GitHub</span>
             </a>
-            <a
+            {/* <a
               href="http://shivbadiger.space/"
               className="flex items-center gap-3 hover:scale-110 transition-transform duration-300 text-muted-foreground hover:text-primary"
               target="_blank"
@@ -1101,7 +1121,7 @@ const Portfolio = () => {
             >
               <Globe className="h-5 w-5" />
               <span>Portfolio</span>
-            </a>
+            </a> */}
           </div>
           <div className="text-4xl font-thin tracking-widest text-muted-foreground">
             LET'S BUILD SOMETHING AMAZING
