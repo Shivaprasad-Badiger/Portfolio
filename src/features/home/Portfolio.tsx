@@ -164,7 +164,7 @@ const projects = [
       >
         <div className="text-center z-10 animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-thin mb-4 tracking-wider text-foreground animate-fade-in">
-            SHIVAPRASAD N BADIGER
+            SHIVAPRASAD BADIGER
           </h1>
           <div
             className="text-2xl md:text-3xl font-light mb-8 text-primary animate-fade-in"
